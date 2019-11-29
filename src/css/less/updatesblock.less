@@ -1,0 +1,81 @@
+@import (reference) 'general.less';
+@import (reference) './maincontentblock.less';
+
+#pageContent[data-page="application"]{
+  
+  #updatesBlock{
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    left: auto;
+    right: 0;
+    background: @pageBKColor ;
+    border-left: @blockSeperator;
+    width: @updatesBlockWidth;
+    height: 100vh;
+    padding: @pagePaddingTop @pagePaddingLeft;
+    padding-left: @mainContentPadding;
+    text-align: left;
+    overflow: auto;
+
+  
+    .header{
+      color: inherit;
+      margin: 0;
+      margin-bottom: 1em;
+    }
+
+    .note{
+      width: 100%;
+      border-radius: 1em;
+      background: white;
+      box-shadow: 0px .2em .7em rgba(0, 0, 0, .04);
+      overflow: hidden;
+      margin-bottom: 1.8em;
+      
+      .container{
+        border-left: solid .2em transparent;
+        padding: 1em;
+        border-radius: inherit;
+        
+        .date-time{
+          font-size: .9em;
+          margin-bottom: 1em;
+          &::first-letter{
+            text-transform: capitalize;
+          }
+        }
+        
+      }
+      
+      &[data-importance="2"]{
+        .container{
+          border-left-color: #999 !important;
+        }
+      }
+
+      &[data-importance="3"]{
+        .container{
+          border-left-color: @color-warning !important;
+        }
+      }
+
+      &[data-importance="4"]{
+        .container{
+          border-left-color: @color-danger !important;
+        }
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: @tbl-breakPoint){
+    #updatesBlock{
+      width: @updatesBlockWidth;
+      height: 100vh;
+      padding: @pagePaddingTop @tbl-pagePaddingLeft;
+      padding-left: @tbl-pagePaddingLeft;
+      text-align: left;
+    }
+  }
+}

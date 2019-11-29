@@ -1,0 +1,179 @@
+.report,
+.report .body .report-content {
+  position: relative;background: white;padding: 0px;border: solid 1px #ccc;border-radius: 0.5vw;margin-top: 2em;transition: box-shadow 500ms ease-in, opacity 500ms ease-in;cursor: pointer;
+}
+.report .body .report-content .head .user-name {
+  display: block;font-size: 100%;font-weight: 700;text-decoration: underline white;text-transform: capitalize;width: max-content;color: inherit;overflow: hidden;text-overflow: ellipsis;transition: all 0.3s;
+}
+.report .body .report-content .title {
+  width: 100%;padding: 0px;text-transform: capitalize;margin: 0.4em 0 0.8em;color: #787878;font-weight: 600;/*align stuffs at center*/display: -webkit-flex;-webkit-flex-wrap: wrap;-webkit-flex-direction: row;-webkit-align-items: center;display: flex;flex-wrap: wrap;flex-direction: row;align-items: center;
+}
+.report {
+  padding: 1.5em 0;
+  padding-bottom: 0px;
+  cursor: initial;
+}
+.report .head {
+  display: inline-flex;
+  width: 100%;
+  text-align: left;
+  padding: 0 1.5em;
+  padding-bottom: 0.8em;
+}
+.report .head .user-image {
+  position: relative;
+  width: 10%;
+  height: min-content;
+  border-radius: 100px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.report .head .user-image a {
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  position: absolute;
+}
+.report .head .user-image a img {
+  border-radius: inherit;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.report .head .user-image:hover {
+  border-color: #1c123a;
+}
+.report .head .user-image:after {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+.report .head > :nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 1em;
+  width: 100%;
+}
+.report .head > :nth-child(2) * {
+  margin: 0px;
+}
+.report .head > :nth-child(2) .user-name {
+  display: inline;
+  font-size: 100%;
+  font-weight: 700;
+  text-decoration: underline white;
+  text-transform: capitalize;
+  color: inherit;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.3s;
+}
+.report .head > :nth-child(2) .user-name:hover {
+  text-decoration: underline #555;
+}
+.report .head > :nth-child(2) .date-time {
+  font-size: 90%;
+}
+.report .head .report-id {
+  font-weight: 600;
+  white-space: nowrap;
+  color: #ff516c;
+}
+.report .head .report-id::before {
+  content: "#";
+}
+.report .body {
+  display: block;
+  padding: 0 1.5em;
+}
+.report .body .report-details {
+  margin-bottom: 1em;
+}
+.report .body .report-details .detail {
+  font-weight: 600;
+  display: flex;
+}
+.report .body .report-details .detail .info {
+  text-transform: capitalize;
+  margin-right: 0.5em;
+}
+.report .body .report-details .detail .info::after {
+  content: ":";
+  padding-left: 0.5em;
+}
+.report .body .report-details .detail .value::first-letter {
+  text-transform: capitalize;
+}
+.report .body .report-content {
+  border: solid 1px #ccc;
+  border-radius: 0.5vw;
+  padding: 0.6em;
+}
+.report .body .report-content .head {
+  padding: 0;
+  margin-bottom: 1em;
+}
+.report .body .report-content .head .user-name {
+  opacity: 0.4;
+  align-self: center;
+}
+.report .body .report-content .title {
+  width: 100%;
+  padding: 0px;
+  text-transform: capitalize;
+  margin: 0px;
+  margin-bottom: 0.8em;
+  /*align stuffs at center*/
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -webkit-align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+}
+.report .body .report-content .title::first-letter {
+  text-transform: capitalize;
+}
+.report .body .report-content .content {
+  display: flex;
+  width: 100%;
+  border-radius: 1%;
+  overflow: hidden;
+}
+.report .body .report-content .content .item {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-color: red;
+  margin: 0;
+}
+.report .body .report-content .content .item::first-letter {
+  text-transform: capitalize;
+}
+.report .body .trailer {
+  width: 0;
+  height: 4em;
+  margin-left: 0.6em;
+  margin-bottom: -2em;
+  border-left: solid 2px #ccc;
+}
+.report .bottom {
+  padding: 1.2em 1.5em;
+  display: flex;
+  justify-content: space-between;
+}
+.report .bottom .action {
+  width: 45%;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.report .bottom .action.disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+.report.remove {
+  opacity: 0;
+}

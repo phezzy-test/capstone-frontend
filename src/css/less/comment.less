@@ -1,0 +1,94 @@
+@import (reference) './general.less';
+@import (reference) './feed.less';
+@import (reference) './addcomment.less';
+@import (reference) './post.less';
+
+@commentContentPaddingLeft: 1em;
+.post.view{
+  cursor: unset;
+  .body{
+    margin-bottom: @contentPadding;
+  }
+  margin-top: 0 !important;
+
+  .post-comment{
+    padding: 1em @contentPadding;
+    border-top: @contentBorder;
+    
+    >:nth-child(1){
+      display: grid;
+      grid-auto-columns: @userImageWidth (100% - @userImageWidth);
+      grid-auto-flow: column;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      overflow: hidden;
+      transition: box-shadow 500ms ease-in;
+     
+    
+      .user-image{
+        width: 100%;
+      }
+      .comment-details-container:extend(.add-comment.comment-input){
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding-left:@commentContentGap;
+        // background: green;
+        
+        .comment-details{
+          display: flex;
+          align-items: center;
+          // background: red;
+          
+          >:nth-child(1){
+            padding: .7em @commentContentPaddingLeft;
+            border-radius: 1.5em;
+            background: #f3f3f3; 
+
+            .author-name{
+              color: @color;
+              font-weight: 600;
+              text-transform: capitalize;
+              margin-right: .5em;
+            }
+          }
+          
+          &:hover{
+            .more-action{
+              opacity: 1;
+            }
+            
+          }
+        }
+        
+        .more-action{
+          .post.head.more-action;
+          justify-self: flex-end;
+          font-size: 75%;
+          padding-left: .5em;
+          opacity: 0;
+          transition: opacity 200ms linear;
+    
+        }
+  
+      }      
+    }
+    
+    >:nth-child(2){
+      padding-left: calc((@userImageWidth + @commentContentGap) + @commentContentPaddingLeft);
+    }
+
+    &.report-focused{
+      background: @color-error;
+    }
+  }
+
+  .more-actions-dialog{
+    .post>.head>.more-actions-dialog;
+    margin-left: 0;
+
+  }
+  
+}

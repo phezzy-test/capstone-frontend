@@ -1,0 +1,113 @@
+#pageContent[data-page="application"] #navBlock {
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background: white;
+  width: 26vw;
+  height: 100vh;
+  padding-top: 1em;
+  text-align: center;
+  background: linear-gradient(205deg, #3e2781, #6747c7);
+  border-right: solid 1px #ccc;
+}
+#pageContent[data-page="application"] #navBlock .links {
+  display: block;
+  padding: 2em 3vw 1em 8vw;
+}
+#pageContent[data-page="application"] #navBlock .links .link {
+  display: block;
+  padding: 0.8em 1.2em;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 800;
+  text-transform: capitalize;
+  text-align: left;
+  border-radius: 9999px;
+  margin-bottom: 0.6em;
+  transition: background 0.2s linear, border-left-color 0.2s linear;
+}
+#pageContent[data-page="application"] #navBlock .links .link .icon {
+  font-size: 1.3em;
+  font-weight: 600;
+  margin-right: 0.8em;
+}
+#pageContent[data-page="application"] #navBlock .links .link:hover,
+#pageContent[data-page="application"] #navBlock .links .link.active {
+  border-left-color: white;
+  background: #3e2781;
+}
+#pageContent[data-page="application"] #navBlock hr {
+  border: none;
+  margin: 0 auto;
+  border-bottom: solid 1px #2b1b5a;
+  width: 90%;
+  margin: 0 1.2em;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference {
+  padding: 1.3em 3vw 1.3em 8vw;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference .label {
+  display: block;
+  font-size: 1em;
+  font-weight: 700;
+  width: 100%;
+  padding: 0px;
+  text-align: left;
+  text-transform: capitalize;
+  margin-bottom: 1em;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm {
+  background: #3e2781;
+  border-radius: 0.5em;
+  padding: 1.2em;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm .error {
+  color: #ff516c;
+  font-weight: 600;
+  margin: 0 0 0.8em;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm .error.hide {
+  display: none;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm .form-element {
+  color: white;
+  margin-bottom: 1.4em;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm .form-element input {
+  color: inherit;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm .form-element .error {
+  color: #ff516c;
+  font-weight: 600;
+  margin: 0;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm button {
+  width: 100%;
+  font-weight: 600;
+}
+#pageContent[data-page="application"] #navBlock #accountPreference #changePassForm button.disabled {
+  cursor: not-allowed;
+  filter: brightness(0.7);
+}
+@media only screen and (max-width: 1230px) {
+  #pageContent[data-page="application"] #navBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #pageContent[data-page="application"] #navBlock .links {
+    width: 100%;
+    display: block;
+    padding: 2em 3vw 1em 3vw;
+  }
+  #pageContent[data-page="application"] #navBlock hr {
+    width: calc(100% - 3vw);
+    padding: 0 3vw;
+    margin: 0;
+  }
+  #pageContent[data-page="application"] #navBlock #accountPreference {
+    padding: 1.3em 3vw;
+  }
+}

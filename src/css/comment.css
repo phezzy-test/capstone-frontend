@@ -1,0 +1,131 @@
+.post.view {
+  cursor: unset;
+  margin-top: 0 !important;
+}
+.post.view .body {
+  margin-bottom: 1.5em;
+}
+.post.view .post-comment {
+  padding: 1em 1.5em;
+  border-top: solid 1px #ccc;
+}
+.post.view .post-comment > :nth-child(1) {
+  display: grid;
+  grid-auto-columns: 10% 90%;
+  grid-auto-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  transition: box-shadow 500ms ease-in;
+}
+.post.view .post-comment > :nth-child(1) .user-image {
+  width: 100%;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding-left: 5%;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .comment-details {
+  display: flex;
+  align-items: center;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .comment-details > :nth-child(1) {
+  padding: 0.7em 1em;
+  border-radius: 1.5em;
+  background: #f3f3f3;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .comment-details > :nth-child(1) .author-name {
+  color: #1c123a;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-right: 0.5em;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .comment-details:hover .more-action {
+  opacity: 1;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action {
+  font-weight: 600;
+  white-space: nowrap;
+  height: max-content;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+  justify-self: flex-end;
+  font-size: 75%;
+  padding-left: 0.5em;
+  opacity: 0;
+  transition: opacity 200ms linear;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action span {
+  color: #888;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action span:nth-child(1) {
+  padding-left: 0.33em;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action span:nth-child(2) {
+  margin: 0px 0.28em;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action:hover span {
+  color: #1c123a;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action:hover span:nth-child(1) {
+  padding-left: 0;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action:hover span:nth-child(2) {
+  margin: 0px 0.445em;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action.fa-trash-alt {
+  font-size: 120%;
+  color: #d0d0d0;
+}
+.post.view .post-comment > :nth-child(1) .comment-details-container .more-action.fa-trash-alt:hover {
+  color: inherit;
+}
+.post.view .post-comment > :nth-child(2) {
+  padding-left: calc((10% + 5%) + 1em);
+}
+.post.view .post-comment.report-focused {
+  background: #ff516c;
+}
+.post.view .more-actions-dialog {
+  background: white;
+  position: absolute;
+  z-index: 3;
+  left: 100%;
+  font-size: 1em;
+  margin-left: -1.5em;
+  padding: 0;
+  border-radius: 1em;
+  border: solid 1px #ccc;
+  overflow: hidden;
+  text-align: left;
+  outline: none;
+  box-shadow: 0px 0.3em 0.8em rgba(0, 0, 0, 0.1);
+  margin-left: 0;
+}
+.post.view .more-actions-dialog .action {
+  padding: 0.6em 1em;
+  background: white;
+  width: max-content;
+  display: block;
+  min-width: 8em;
+  text-transform: capitalize;
+  opacity: 0.8;
+  cursor: pointer;
+}
+.post.view .more-actions-dialog .action .icon {
+  margin-right: 0.6em;
+}
+.post.view .more-actions-dialog .action:hover {
+  background: #f7f7f7;
+  opacity: 1;
+}
+.post.view .more-actions-dialog.hide {
+  z-index: -3;
+}

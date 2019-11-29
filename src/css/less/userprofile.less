@@ -1,0 +1,163 @@
+@import (reference) './general.less';
+@import (reference) './maincontentblock.less';
+
+.fullWidth {
+  position: relative;
+  width: calc(100% + (@mainContentPadding * 2));
+  margin-left: -@mainContentPadding;
+} 
+
+#pageContent[data-page="application"]{
+  #mainContentBlock[data-comp="profile"]{
+    .container{
+      padding-top: 0;
+
+      @coverImageHeight: 18em;
+      @passportWidth: 11vw;
+      @imagesBorder: solid 4px @color;
+
+      #coverImage{
+        .fullWidth;
+        height: @coverImageHeight;
+        overflow: hidden;
+        border-bottom: @imagesBorder;
+
+        img{
+          width: 100%;
+          height: 130%;;
+          object-fit: cover;
+        }
+      }
+
+      #passport{
+        position: relative;
+        width: @passportWidth;
+        margin-top: -$width / 2;
+        border-radius: 100%;
+        overflow: hidden;
+        background: white;
+        border: @imagesBorder;
+
+        img{
+          position: absolute;
+          padding: 3px;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+          border-radius: inherit;
+        }
+
+        &:before{
+          display: block;
+          content: "";
+          padding-top: 100%;
+        }
+      }
+
+      #userPreviewInfo{
+        .user-name{
+          text-transform: capitalize;
+          margin: 1.2em 0 0;
+        }
+        
+        .info{
+          font-size: 1.1em;
+          margin: .7em 0;
+
+          &:first-letter{
+            text-transform: capitalize;
+          }
+        }
+      }
+
+      #profileHeader{
+        .fullWidth;
+        display: flex;
+        justify-content: space-evenly;
+        background: @mainContentHeaderBk;
+        padding: 0 @mainContentPadding;
+        
+        .link{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+          position: relative;
+          height: 100%; 
+          width: 100%;
+          padding: 1em;
+          text-align: center;
+          overflow: hidden;
+          background: inherit; 
+          font-weight: 600;  
+          font-size: 1.1em;
+          text-transform: capitalize;
+          color: @color;    
+          cursor: pointer;
+          text-decoration: none;
+
+
+          @bottomHeight : .5em;
+            
+          >:last-child{
+            position: absolute;
+            z-index: 0;
+            top: auto;
+            bottom: -@bottomHeight;
+            left: 0px;
+            width: 100%;
+            border-top: solid @bottomHeight @color;
+            border-radius: 999px;
+            transition: bottom 300ms;
+          }
+
+          &:hover, &.active{
+            >:last-child{
+              bottom: -@bottomHeight * .5;
+            }
+          }
+
+          &.active{
+            background: darken(@mainContentHeaderBk, 5%);
+          }
+
+        }
+        
+      }
+
+      .empty-profile-tab{
+        width: 100%;
+        text-align: center;
+        padding-top: 7em;
+        min-height: 55vh;
+
+        color: darken(@pageBKColor, 10%);
+        font-weight: 600;
+        font-size: 1.7em;
+
+        &::first-letter{
+          text-transform: capitalize;
+        }
+      }
+
+    }
+  }
+
+  @media only screen and (max-width: @tbl-breakPoint){
+    #mainContentBlock[data-comp="profile"]{
+      .container{
+        @imagesBorder: solid 3px @color;
+  
+        #coverImage{
+          border-bottom: @imagesBorder;  
+        }
+  
+        #passport{
+          border: @imagesBorder;  
+        }
+      }
+    }
+  }
+}

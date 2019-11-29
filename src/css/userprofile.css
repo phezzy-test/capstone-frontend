@@ -1,0 +1,122 @@
+.fullWidth {
+  position: relative;
+  width: calc(100% + (3em * 2));
+  margin-left: -3em;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container {
+  padding-top: 0;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #coverImage {
+  position: relative;
+  width: calc(100% + (3em * 2));
+  margin-left: -3em;
+  height: 18em;
+  overflow: hidden;
+  border-bottom: solid 4px #1c123a;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #coverImage img {
+  width: 100%;
+  height: 130%;
+  object-fit: cover;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #passport {
+  position: relative;
+  width: 11vw;
+  margin-top: -5.5vw;
+  border-radius: 100%;
+  overflow: hidden;
+  background: white;
+  border: solid 4px #1c123a;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #passport img {
+  position: absolute;
+  padding: 3px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #passport:before {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #userPreviewInfo .user-name {
+  text-transform: capitalize;
+  margin: 1.2em 0 0;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #userPreviewInfo .info {
+  font-size: 1.1em;
+  margin: 0.7em 0;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #userPreviewInfo .info:first-letter {
+  text-transform: capitalize;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader {
+  position: relative;
+  width: calc(100% + (3em * 2));
+  margin-left: -3em;
+  display: flex;
+  justify-content: space-evenly;
+  background: #ebe7f8;
+  padding: 0 3em;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  padding: 1em;
+  text-align: center;
+  overflow: hidden;
+  background: inherit;
+  font-weight: 600;
+  font-size: 1.1em;
+  text-transform: capitalize;
+  color: #1c123a;
+  cursor: pointer;
+  text-decoration: none;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader .link > :last-child {
+  position: absolute;
+  z-index: 0;
+  top: auto;
+  bottom: -0.5em;
+  left: 0px;
+  width: 100%;
+  border-top: solid 0.5em #1c123a;
+  border-radius: 999px;
+  transition: bottom 300ms;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader .link:hover > :last-child,
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader .link.active > :last-child {
+  bottom: -0.25em;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #profileHeader .link.active {
+  background: #dbd4f2;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container .empty-profile-tab {
+  width: 100%;
+  text-align: center;
+  padding-top: 7em;
+  min-height: 55vh;
+  color: #d5ccef;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+#pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container .empty-profile-tab::first-letter {
+  text-transform: capitalize;
+}
+@media only screen and (max-width: 1230px) {
+  #pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #coverImage {
+    border-bottom: solid 3px #1c123a;
+  }
+  #pageContent[data-page="application"] #mainContentBlock[data-comp="profile"] .container #passport {
+    border: solid 3px #1c123a;
+  }
+}

@@ -1,0 +1,33 @@
+@import (reference) './general.less';
+@import (reference) './post.less';
+
+#postEdit{
+
+  .post{
+    .body{
+      padding-bottom: @contentPadding;
+      
+    }
+  }
+
+  .form-element{
+    padding: .8em 1.3em;
+  }
+
+  button[type=submit]:extend(.post.disabled){
+    width: 100%;
+    margin-top: 1em;
+    text-transform: capitalize;
+    font-weight: 600;
+    padding: .8em;
+
+    .icon{
+      margin-right: .7em;
+    }
+
+    &.disabled{
+      cursor: not-allowed;
+      opacity: .8;
+    }
+  }
+}

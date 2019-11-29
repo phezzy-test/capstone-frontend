@@ -1,0 +1,20 @@
+#postEdit .post .body {
+  padding-bottom: 1.5em;
+}
+#postEdit .form-element {
+  padding: 0.8em 1.3em;
+}
+#postEdit button[type=submit] {
+  width: 100%;
+  margin-top: 1em;
+  text-transform: capitalize;
+  font-weight: 600;
+  padding: 0.8em;
+}
+#postEdit button[type=submit] .icon {
+  margin-right: 0.7em;
+}
+#postEdit button[type=submit].disabled {
+  cursor: not-allowed;
+  opacity: 0.8;
+}

@@ -1,0 +1,17 @@
+#errorPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#errorPage .icon {
+  font-size: 5em;
+}
+#errorPage h1 {
+  margin: 1.8em 0 0.2em;
+}
+#errorPage p {
+  font-weight: 600;
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}

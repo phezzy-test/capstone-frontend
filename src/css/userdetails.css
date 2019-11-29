@@ -1,0 +1,19 @@
+#userDetails table {
+  position: relative;width: calc(100% + (3em * 2));margin-left: -3em;
+}
+#userDetails table {
+  border-collapse: collapse;
+}
+#userDetails table tbody tr td {
+  padding: 1em 3em;
+  border: none;
+  text-transform: capitalize;
+}
+#userDetails table tbody tr td:nth-child(1) {
+  width: 25%;
+  font-weight: 600;
+  opacity: 0.75;
+}
+#userDetails table tbody tr:nth-of-type(even) {
+  background: #e5dff5;
+}

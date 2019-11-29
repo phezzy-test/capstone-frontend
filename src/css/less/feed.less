@@ -1,0 +1,28 @@
+@import (reference) './general.less';
+
+@contentPadding: 1.5em;
+@contentBorderColor: @blockSeperatorColor;
+@contentBorderWidth: 1px;
+@contentBorder: solid @contentBorderWidth @contentBorderColor;
+@contentBorderRadius: .5vw;
+
+#mainContentBlock[data-comp=feeds]{
+
+  .container{
+
+    .empty-posts-tab{
+      width: 100%;
+      text-align: center;
+      padding-top: 7em;
+      min-height: 55vh;
+
+      color: darken(@pageBKColor, 10%);
+      font-weight: 600;
+      font-size: 1.7em;
+      
+      &::first-letter{
+        text-transform: capitalize;
+      }
+    }
+  }
+}

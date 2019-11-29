@@ -1,0 +1,330 @@
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .form-label {
+  display: inline-block;border-radius: 2em;outline: 0;padding: 0.6em 0.95em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .form-label {
+  font-size: 100%;width: 100%;border: solid 1px #cccccc;resize: none;overflow: hidden;/*background-colorx: white;*/
+  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.06);
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader,
+#pageContent[data-page="application"] #mainContentBlock .container,
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog {
+  width: 100%;
+  padding-bottom: 1em;
+  padding-top: 1em;
+  padding-left: calc(26vw + 3em);
+  padding-right: calc(33vw + 3em);
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader {
+  position: sticky;
+  top: 0px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ebe7f8;
+  border-bottom: solid 1px #ccc;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .page {
+  display: inline-flex;
+  align-items: center;
+  margin: 0px;
+  font-size: 1.6em;
+  line-height: 1;
+  text-transform: capitalize;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back {
+  width: 1.8em;
+  position: relative;
+  font-size: 68%;
+  margin-right: 0.6em;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 300ms ease-out;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back > :nth-child(1) {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back:after {
+  display: block;
+  content: "";
+  padding-top: 100%;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back:hover {
+  background: #dbd4f2;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .icon {
+  font-size: 1.6em;
+  color: #beb1e7;
+  color: #c7c7c7;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info {
+  display: flex;
+  align-items: center;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .name {
+  margin: 0 1em 0 0;
+  text-transform: capitalize;
+  color: #6e6e6e;
+  color: #1c123a;
+  font-weight: 600;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .passport {
+  overflow: hidden;
+  display: flex;
+  width: 2.8em;
+  height: 2.8em;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  padding: 2px;
+  border: solid 2px #1c123a;
+  margin: 0;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .passport img {
+  width: 100%;
+  height: 100%;
+  object-position: center;
+  object-fit: cover;
+  border-radius: 100%;
+}
+#pageContent[data-page="application"] #mainContentBlock .container {
+  padding-top: 1.5em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: auto;
+  right: 0px;
+  top: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: initial;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container {
+  padding: 0 15%;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content {
+  min-width: 50%;
+  width: auto;
+  height: auto;
+  padding-top: 3.5em;
+  padding: 2.8em 2.8em;
+  background: white;
+  border-radius: 0.8vw;
+  box-shadow: 0px 1vw 2.5vw -1vw rgba(0, 0, 0, 0.4);
+  margin-top: -3.5%;
+  transition: all 0.2s;
+  transform: scale(1);
+  opacity: 1;
+  text-align: left;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .cancel {
+  position: absolute;
+  top: 1em;
+  left: auto;
+  right: 1em;
+  padding: 0.6em;
+  align-self: flex-end;
+  color: #d0d0d0;
+  cursor: pointer;
+  transition: color 300ms, font-weight 300ms;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .cancel:hover {
+  color: #222;
+  font-weight: 800;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .header {
+  font-weight: 700;
+  width: 100%;
+  text-align: center;
+  margin: 0 0 1.3em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .header:first-letter {
+  text-transform: capitalize;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field {
+  margin-bottom: 1.6em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .form-label {
+  font-weight: 600;
+  box-shadow: none;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: capitalize;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field select.form-element,
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field textarea.form-element {
+  /*border: none;*/
+  box-shadow: none;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field select {
+  border-radius: 2em;
+  padding-top: 0.8em;
+  padding-bottom: 0.8em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field textarea {
+  border-radius: 1.5em !important;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error {
+  display: inline-block;
+  border-radius: 2em;
+  outline: 0;
+  padding: 0.6em 0.95em;
+  font-size: 100%;
+  width: 100%;
+  border: solid 1px #cccccc;
+  resize: none;
+  overflow: hidden;
+  /*background-colorx: white;*/
+  box-shadow: inset 0 0 8px 0 rgba(0, 0, 0, 0.06);
+  font-weight: 600;
+  box-shadow: none;
+  border: none;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-transform: capitalize;
+  color: #ff516c;
+  margin: 0;
+  font-size: 95%;
+  margin-top: 0.3em;
+  text-transform: lowercase;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error.mandatory {
+  border-bottom-color: #ff516c;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error:focus {
+  border-color: #068fd5 !important;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error::placeholder,
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error.placeholder,
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .field .error option[disabled] {
+  font-style: italic !important;
+  font-weight: 100;
+  color: #b4b4b4 !important;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .btn {
+  width: 100%;
+  padding: 1em;
+  font-weight: bold;
+  text-transform: none;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .btn .icon {
+  margin-right: 0.7em;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container .content .btn.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog.hide {
+  display: flex !important;
+  z-index: -5;
+}
+#pageContent[data-page="application"] #mainContentBlock #contentReportDialog.hide .content {
+  transform: scale(2.2);
+  opacity: 0;
+}
+@media only screen and (max-width: 1230px) {
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader,
+  #pageContent[data-page="application"] #mainContentBlock .container,
+  #pageContent[data-page="application"] #mainContentBlock #contentReportDialog {
+    padding-left: calc(26vw + 1.5em);
+    padding-right: calc(33vw + 1.5em);
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader {
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ebe7f8;
+    border-bottom: solid 1px #ccc;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .page {
+    display: inline-flex;
+    align-items: center;
+    margin: 0px;
+    font-size: 1.6em;
+    line-height: 1;
+    text-transform: capitalize;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back {
+    width: 1.8em;
+    position: relative;
+    font-size: 68%;
+    margin-right: 0.6em;
+    border-radius: 999px;
+    cursor: pointer;
+    transition: background 300ms ease-out;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back > :nth-child(1) {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back:after {
+    display: block;
+    content: "";
+    padding-top: 100%;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .page .go-back:hover {
+    background: #dbd4f2;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .icon {
+    font-size: 1.6em;
+    color: #beb1e7;
+    color: #c7c7c7;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info {
+    display: flex;
+    align-items: center;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .name {
+    margin-right: 1em;
+    text-transform: capitalize;
+    color: #6e6e6e;
+    color: #1c123a;
+    font-weight: 600;
+    text-align: right;
+    width: min-content;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .passport {
+    overflow: hidden;
+    display: flex;
+    width: 2.8em;
+    height: 2.8em;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    padding: 2px;
+    border: solid 2px #1c123a;
+    margin: 0;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentHeader .user-info .passport img {
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 100%;
+  }
+  #pageContent[data-page="application"] #mainContentBlock #contentReportDialog .container {
+    padding: 0 6%;
+  }
+}

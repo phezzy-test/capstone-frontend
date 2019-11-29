@@ -1,0 +1,411 @@
+@import url("https://use.fontawesome.com/releases/v5.7.0/css/all.css");
+
+@siteColor : #6747c7;
+@siteColorLight : lighten(@siteColor, 5%);
+@color: darken(@siteColor, 38%);
+@tbl-breakPoint: 1230px;
+@mbl-breakPoint: 768px;
+
+@pagePaddingTop: 1em; 
+@tbl-pagePaddingTop: 1em; 
+
+@pagePaddingLeft: 8vw;
+@tbl-pagePaddingLeft: 3vw;
+
+@pageBKColor: lighten(@siteColor, 44%);
+
+@blockSeperatorColor: #ccc;
+@blockSeperator: solid 1px @blockSeperatorColor;
+
+@navBlockWidth: 26vw;
+@updatesBlockWidth: 33vw;
+
+@mainContentHeaderBk: darken(@pageBKColor, 3%);
+
+@color-warning: #f0ad4e;
+@color-danger: #d9534f;
+@color-info: #5bc0de;
+@color-success: #35c48d;
+@color-primary: #337ab7;
+@color-secondary: #337ab7;
+@color-error : #ff516c;
+
+@formElementBorderColor : #cccccc;
+@formElementMarginBottom : 1em;
+
+@animationTime: 300ms;  // <== value must be the same here and in libjs
+
+@font-face {
+  font-family: 'Logo';
+  src:  url('../fonts/Pacifico-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'SourceSansPro';
+	src:  url('../fonts/SourceSansPro-Light.ttf');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src:  url('../fonts/SourceSansPro.ttf');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'SourceSansPro';
+  src:  url('../fonts/SourceSansProBold.ttf');
+  font-weight: 700;
+  font-style: normal;
+}
+
+*.Error, *.Pass.Error, *.Error:hover,*.Pass.Error:focus,
+*.invalid, *.Pass.invalid, *.invalid:hover,*.Pass.invalid:focus{
+	//box-shadow: 0px 0px 2px 2px @color-error;
+	border: solid 1px @color-error !important;
+
+}
+
+#popMessage{
+	position: fixed; 
+	z-index: 999999999;
+	min-width: 15vw; 
+	max-width: 22vw; 
+	height: auto; 
+	top: auto; 
+	bottom: 0px; 
+	left: 0;
+	padding: 2em;
+	padding-left: 0;
+	margin-left: @pagePaddingLeft;
+	//box-shadow: 0 0 5px #dbdbdb;
+	
+	.message{
+		background: rgba(17, 17, 17, 0.9);
+		margin: 0;
+		color: white;
+		text-transform: capitalize;
+		border-radius: 3px;
+		font-weight: 500;
+		padding: 15px;
+		box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+		word-break: break-word;
+
+		height: 0;
+		padding: 0 1em;
+		overflow: hidden;
+		transition: all @animationTime linear;
+		
+
+		&:nth-child(1){
+			margin-top: 0px;
+		}
+
+		&.show{
+			margin-top: 1em;
+			height: 100%;
+			padding-top: 1.3em;
+			padding-bottom: $padding-top;
+
+		}
+	}
+
+	@media only screen and (max-width: @tbl-breakPoint){
+		min-width: 20vw; 
+		max-width: 30vw; 	
+		margin-left: @tbl-pagePaddingLeft;
+
+	}
+
+}
+
+.form-element, .btn{
+	display: inline-block;
+	border-radius: 2em;
+	outline: 0;
+	padding: .6em .95em;
+}
+
+.form-element{
+	font-size: 100%;
+	width: 100%;
+	border: solid 1px @formElementBorderColor;
+	resize: none;
+	overflow: hidden;
+	/*background-colorx: white;*/
+	box-shadow: inset 0 0 8px 0 rgba(0,0,0,.06);
+
+	&.mandatory{
+		border-bottom-color: @color-error;
+	}
+
+	&:focus{
+		//border-color:#6ca3fe !important; 
+		border-color: #068fd5 !important; 
+		//box-shadow: 0px 0px 3px 0px #6ca3fe;
+	}
+
+	&::placeholder, &.placeholder, option[disabled]{
+		font-style: italic !important;
+		font-weight: 100;
+		color: rgb(180, 180, 180) !important;
+	}
+
+}
+
+.btn{	
+	margin-bottom: 0;
+	line-height: 1;
+	text-align: center;
+	white-space: nowrap;
+	vertical-align: middle;
+	touch-action: manipulation;
+	cursor: pointer;
+	user-select: none;
+	color: white;
+	font-size: 1em;
+	border: 1px solid transparent;
+	border-radius: 999999999px;
+	background-color: @siteColorLight;
+	transition: all 250ms linear;
+
+	.btn-type(@bk, @color: white, @hoverColor: white){
+		@btnSuccessBorderBk : #35c48d;
+		@btnBorder : darken(@bk, 10%);
+		@btnSuccessBorderBkHover : #35c48d;
+	
+		border-color: @btnBorder;
+		background: @bk;
+		color: @color;
+	
+		&:hover, &:active, &:focus{
+			border-color: darken(@btnBorder, 5%) !important;
+			background-color: @btnBorder !important; 
+			color: @hoverColor !important;
+		}
+	
+	}	
+
+	&.btn-success{
+		.btn-type(@color-success);
+	}	
+
+	&.btn-danger{
+		.btn-type(@color-danger);
+	}	
+
+	&.btn-warning{
+		.btn-type(@color-warning);
+	}	
+	
+	&.btn-negative{
+		@color: #d4d4d4;
+		@colorDark: darken(@color, 10%);
+		border-color: @colorDark;
+		background-color: @color;
+		/*color: white;*/
+	
+		&:hover, &:active, &:focus{
+			/*border-color: @colorDark !important;*/
+			background-color: @colorDark !important; 
+			/*color: white !important;*/
+		}
+	
+	}
+
+	&:hover, &:active, &:focus{
+		border-color: darken(@siteColor, 5%);
+		background-color: @siteColor;
+		box-shadow: 0px 0.2em 0.25em rgba(54, 54, 54, 0.4);
+	}
+}
+
+.hero-input{
+	display: flex;
+	/*align-items: center;*/
+	position: relative;	
+	cursor: text;
+	padding: 0px;
+	overflow: hidden;
+	background: none;
+	margin-bottom: @formElementMarginBottom;
+	box-shadow: inset 0 0px 8px 0 rgba(0,0,0,.06);
+	color: inherit;
+	font-size: 1em;
+
+
+	@hero-input-label_fontSize : .83; /*<== in em*/
+	@heroInputPaddingTop : .5em;
+	@heroLabelPaddingTop : .35em;
+	@heroLabelPaddingBottom : @heroLabelPaddingTop;
+	
+
+	.hero-input-label,.hero-input-field{
+		padding: 0px 1.5em;
+		font-size: 1em;
+		text-align: left;
+	}
+
+	.hero-input-label{
+		position: absolute;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		margin: 0px 0px;
+		color: inherit;
+		top: auto;
+		font-weight: 600;
+		text-transform: capitalize;
+		height: 100%;
+		z-index: 0;
+		background: none;
+		transition: height 300ms ease-out, padding 300ms ease-out;
+		overflow: hidden;
+
+		>:nth-child(1){
+			width: 100%;
+			white-space: nowrap; 
+			word-break: normal;
+			word-wrap: normal;
+			text-overflow: ellipsis;
+			font-size: 1em;
+			transition: font-size 300ms ease-out;
+			// filter: brightness(2.8);
+			overflow: hidden;
+
+		}
+		
+		&::first-letter{
+			text-transform: capitalize !important;
+		}
+	}
+
+	.hero-input-field{
+		position: relative;
+		display: block;
+		width: 100%;
+		//z-index: 1;
+		margin-top: ~"calc(1.2em + " @heroInputPaddingTop ~" + 0.2em)";
+		padding-bottom: @heroInputPaddingTop;
+		background: transparent;
+		border: 0;
+		border-bottom-color: transparent;
+		outline: 0;
+		resize: none;
+
+		&:first-letter{
+			text-transform: capitalize !important;
+		}
+
+	}
+
+	#notEmpty(){
+		.hero-input-label{
+			padding-top: @heroInputPaddingTop;
+			z-index: 1;
+			height: ~"calc( calc( calc(1em * " @hero-input-label_fontSize ~") * 1.2 ) + " @heroLabelPaddingBottom + @heroInputPaddingTop ~" ) !important";
+			
+			>:nth-child(1){
+				font-size: @hero-input-label_fontSize * 1em !important;
+			}
+		}
+		
+	}
+
+	&.focused{
+		border-color: #068fd5!important;
+
+		#notEmpty();
+	}
+
+	&.filled, &.fixed-focused{
+		#notEmpty();
+	}
+
+	&.mandatory{
+		border-bottom: none;
+
+		.hero-input-field{
+			border-bottom: solid 1px @color-error;
+		}
+	}
+}
+
+#siteLogo{
+	font-family: 'logo', sans-serif !important;
+	font-size: 1.8vw;
+	color: white;
+	line-height: 1;
+	text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.3);
+
+	&.dark{
+		font-weight: 600;
+    padding: .1em;
+		-webkit-text-fill-color: transparent; 
+		background: @siteColor; 
+		background: linear-gradient(145deg, @siteColor ,@color); 
+		background-clip: text; 
+	}
+
+	@media only screen and (max-width:  @tbl-breakPoint) {
+		font-size: 1.6em;	
+	}
+
+	@media only screen and (max-width:  @mbl-breakPoint) {
+		font-size: 2em;	
+	}
+}
+
+#customScrollBar(@scrollbarWidth : 10px){
+	/*scroll-behavior: smooth;*/
+	scrollbar-face-color: red;
+	scrollbar-shadow-color: aqua;
+
+
+	&::-webkit-scrollbar{
+			width: @scrollbarWidth;
+			height: @scrollbarWidth;
+	}
+
+	&::-webkit-scrollbar-track{
+			box-shadow: inset 0 0 0px rgba(0,0,0,0);
+			border-radius: 0px;
+			background-color: @pageBKColor;
+	}
+
+	&::-webkit-scrollbar-thumb{
+			border-radius: 9999999px;
+			box-shadow: inset 0 0 (@scrollbarWidth * .5) rgba(0,0,0,0.4);
+			background-color: rgb(117, 117, 117);
+	}
+}
+
+.loader{
+	margin: auto;
+	display: block;
+	text-align: center;
+	font-size: 2vw;
+	padding: 1em;
+
+}
+
+body{
+	font-family: 'SourceSansPro';
+	background: @pageBKColor;
+	color: @color;
+	overflow-y: scroll;
+	#customScrollBar();
+	box-sizing: border-box;	
+
+	*{
+		font-family: inherit;
+		box-sizing: border-box;	
+		#customScrollBar(6px);
+        
+	}
+	
+}

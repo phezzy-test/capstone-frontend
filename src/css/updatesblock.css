@@ -1,0 +1,58 @@
+#pageContent[data-page="application"] #updatesBlock {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  left: auto;
+  right: 0;
+  background: #f5f3fb;
+  border-left: solid 1px #ccc;
+  width: 33vw;
+  height: 100vh;
+  padding: 1em 8vw;
+  padding-left: 3em;
+  text-align: left;
+  overflow: auto;
+}
+#pageContent[data-page="application"] #updatesBlock .header {
+  color: inherit;
+  margin: 0;
+  margin-bottom: 1em;
+}
+#pageContent[data-page="application"] #updatesBlock .note {
+  width: 100%;
+  border-radius: 1em;
+  background: white;
+  box-shadow: 0px 0.2em 0.7em rgba(0, 0, 0, 0.04);
+  overflow: hidden;
+  margin-bottom: 1.8em;
+}
+#pageContent[data-page="application"] #updatesBlock .note .container {
+  border-left: solid 0.2em transparent;
+  padding: 1em;
+  border-radius: inherit;
+}
+#pageContent[data-page="application"] #updatesBlock .note .container .date-time {
+  font-size: 0.9em;
+  margin-bottom: 1em;
+}
+#pageContent[data-page="application"] #updatesBlock .note .container .date-time::first-letter {
+  text-transform: capitalize;
+}
+#pageContent[data-page="application"] #updatesBlock .note[data-importance="2"] .container {
+  border-left-color: #999 !important;
+}
+#pageContent[data-page="application"] #updatesBlock .note[data-importance="3"] .container {
+  border-left-color: #f0ad4e !important;
+}
+#pageContent[data-page="application"] #updatesBlock .note[data-importance="4"] .container {
+  border-left-color: #d9534f !important;
+}
+@media only screen and (max-width: 1230px) {
+  #pageContent[data-page="application"] #updatesBlock {
+    width: 33vw;
+    height: 100vh;
+    padding: 1em 3vw;
+    padding-left: 3vw;
+    text-align: left;
+  }
+}

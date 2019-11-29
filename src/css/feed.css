@@ -1,0 +1,12 @@
+#mainContentBlock[data-comp=feeds] .container .empty-posts-tab {
+  width: 100%;
+  text-align: center;
+  padding-top: 7em;
+  min-height: 55vh;
+  color: #d5ccef;
+  font-weight: 600;
+  font-size: 1.7em;
+}
+#mainContentBlock[data-comp=feeds] .container .empty-posts-tab::first-letter {
+  text-transform: capitalize;
+}
